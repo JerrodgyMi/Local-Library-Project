@@ -61,11 +61,10 @@ function getMostPopularAuthors(books, authors) {
     .slice(0, 5);
 }
 
-module.exports = {
-  getTotalBooksCount,
-  getTotalAccountsCount,
-  getBooksBorrowedCount,
-  getMostCommonGenres,
-  getMostPopularBooks,
-  getMostPopularAuthors,
-};
+// Browser-safe version
+window.getTotalBooksCount = getTotalBooksCount;
+window.getTotalAccountsCount = getTotalAccountsCount;
+window.getBooksBorrowedCount = getBooksBorrowedCount;
+window.getMostCommonGenres = getMostCommonGenres;
+window.getMostPopularBooks = getMostPopularBooks;
+window.getMostPopularAuthors = getMostPopularAuthors;
